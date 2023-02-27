@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TIC TAC TOE</string>
+    <string name="single_player">Single Player</string>
+    <string name="double_player">Double Player</string>
+    <string name="game_guide">Game Guide</string>
+    <string name="contact_us">Contact us</string>
 </resources>
