@@ -13,10 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TICTACTOE"
         tools:targetApi="31">
+
         <activity
-            android:theme="@style/FullScreen"
             android:name=".SplashScreen"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +26,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>
