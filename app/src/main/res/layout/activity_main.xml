@@ -18,4 +18,15 @@
         android:background="@drawable/buttonstyle"
         android:text="@string/single_player"
         android:textSize="20sp" />
+    <Button
+        android:id="@+id/btn_Double_Player"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonstyle"
+        android:text="@string/double_player"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+
 </LinearLayout>
