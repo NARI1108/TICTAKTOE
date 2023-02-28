@@ -10,6 +10,7 @@
     tools:context=".MainActivity">
 
     <Button
+        android:onClick="btn_Click"
         android:id="@+id/btn_Single_Player"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -19,6 +20,7 @@
         android:text="@string/single_player"
         android:textSize="20sp" />
     <Button
+        android:onClick="btn_Click"
         android:id="@+id/btn_Double_Player"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -28,6 +30,7 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center"/>
     <Button
+        android:onClick="btn_Click"
         android:id="@+id/btn_Game_Guide"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -37,13 +40,15 @@
         android:layout_gravity="center"
         android:background="@drawable/buttonstyle"
         />
+
     <Button
         android:id="@+id/btn_Contact_us"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="@string/contact_us"
-        android:textSize="20sp"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:background="@drawable/buttonstyle"
-        android:layout_marginTop="10dp"/>
+        android:onClick="btn_Click"
+        android:text="@string/contact_us"
+        android:textSize="20sp" />
 </LinearLayout>
