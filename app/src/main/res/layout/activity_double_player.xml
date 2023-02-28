@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".double_Player"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6">
+        <TextView
+            android:id="@+id/txt_player1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/style2"
+            android:gravity="center"
+            android:padding="6dp"
+            android:textStyle="bold"
+            android:text="@string/Player_1"
+            android:textColor="#141abf"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/txt_Score_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="@string/Zero"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/txt_Score_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Zero_left"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/txt_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:enabled="false"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/style2"
+            android:text="@string/player_2"
+            android:textSize="30sp"
+            android:textColor="#bf1414"
+            android:padding="6dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/pg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/board2"
+            android:layout_marginTop="95dp"
+            android:layout_marginBottom="95dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:weightSum="3"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:tag="0"
+                    android:id="@+id/img_0"
+                    android:onClick="imgsClick"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="1"
+                    android:id="@+id/img_1"
+                    android:onClick="imgsClick"
+                    android:layout_margin="8dp" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="2"
+                    android:id="@+id/img_2"
+                    android:onClick="imgsClick"
+                    android:layout_margin="8dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="imgsClick"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:tag="3"
+                    android:id="@+id/img_3"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="imgsClick"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:tag="4"
+                    android:id="@+id/img_4"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="imgsClick"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:tag="5"
+                    android:id="@+id/img_5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="imgsClick"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:tag="6"
+                    android:id="@+id/img_6"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="imgsClick"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:tag="7"
+                    android:id="@+id/img_7"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="imgsClick"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:tag="8"
+                    android:id="@+id/img_8"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+<RelativeLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_centerInParent="true"
+android:orientation="vertical"
+android:visibility="gone"
+android:id="@+id/result_layout"
+android:background="#4B000000">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:textSize="30sp"
+    android:textColor="#ffffff"
+    android:id="@+id/txt_result"
+    android:textStyle="bold" />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="بازی مجدد"
+    android:paddingLeft="31dp"
+    android:paddingRight="31dp"
+    android:textStyle="bold"
+    android:layout_marginTop="15dp"
+    android:textSize="25sp"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/txt_result"
+    android:id="@+id/btn_play_again"
+    android:background="@drawable/buttonstyle"/>
+</RelativeLayout>
+</RelativeLayout>

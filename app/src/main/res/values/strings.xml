@@ -4,4 +4,15 @@
     <string name="double_player">Double Player</string>
     <string name="game_guide">Game Guide</string>
     <string name="contact_us">Contact us</string>
+    <string name="game_guide_Str">You can play Doz with your friends.
+        That our programming team created in this artificial intelligence game
+        has done that you can with it on two levels, easy and hard
+        play
+        The dose game is run with two blue and red dice
+        Such that if three beads of the same color are next to each other
+        The game will be in favor of the winning player</string>
+    <string name="Zero">0</string>
+    <string name="Player_1">Player1</string>
+    <string name="Zero_left">0</string>
+    <string name="player_2">Player2</string>
 </resources>
