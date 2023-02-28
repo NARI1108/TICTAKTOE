@@ -5,5 +5,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".double_Player">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6">
+        <TextView
+            android:id="@+id/txt_player1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/style2"
+            android:gravity="center"
+            android:padding="6dp"
+            android:textStyle="bold"
+            android:text="@string/Player_1"
+            android:textColor="#141abf"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/txt_Score_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="@string/Zero"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/txt_Score_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Zero_left"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/txt_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:enabled="false"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/style2"
+            android:text="@string/player_2"
+            android:textSize="30sp"
+            android:textColor="#bf1414"
+            android:padding="6dp"
+            />
+    </LinearLayout>
 </LinearLayout>
