@@ -32,6 +32,18 @@
             android:id="@+id/edt_Player_1"
             android:layout_below="@+id/txt_title"
             android:background="@drawable/style1"/>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/Player_2"
+            android:textColor="#080808"
+            android:background="@drawable/style1"
+            android:layout_below="@id/edt_Player_1"
+            android:id="@+id/edt_Player_2"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
 </RelativeLayout>
