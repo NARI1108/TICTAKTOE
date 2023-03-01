@@ -18,6 +18,8 @@ public class double_Player extends AppCompatActivity {
         img_0=findViewById(R.id.img_0);  img_1=findViewById(R.id.img_1);  img_2=findViewById(R.id.img_2);
         img_3=findViewById(R.id.img_3);  img_4=findViewById(R.id.img_4);  img_5=findViewById(R.id.img_5);
         img_6=findViewById(R.id.img_6);  img_7=findViewById(R.id.img_7);  img_8=findViewById(R.id.img_8);
-
+        Dialog playerNamesDialog = new Dialog(this);
+        playerNamesDialog.setContentView(R.layout.player_names_dialog);
+        playerNamesDialog.show();
     }
 }
