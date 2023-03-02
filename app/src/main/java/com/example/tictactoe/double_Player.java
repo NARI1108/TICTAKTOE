@@ -13,6 +13,8 @@ public class double_Player extends AppCompatActivity {
     String Player_Name_1,Player_Name_2;
     TextView txt_player1,txt_player2,txt_Score_1,txt_Score_2;
     ImageView img_0,img_1,img_2,img_3,img_4,img_5,img_6,img_7,img_8;
+    int turn =1;
+    int[] status = {0,0,0,0,0,0,0,0,0};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,4 +46,18 @@ public class double_Player extends AppCompatActivity {
         });
         playerNamesDialog.show();
     }
+    public void imagesClick(View view){
+        int tag = Integer.parseInt((String)view.getTag());
+        if(status[tag] != 0)return;
+        ImageView imagesView =(ImageView) view;
+        if(turn == 1) {
+            imagesView.setImageResource(R.drawable.multiply);
+            turn=2;
+            status[tag]=1;
+        }else {
+            imagesView.setImageResource(R.drawable.circle);
+            turn=1;
+            status[tag]=2;
+        }
+        }
 }
