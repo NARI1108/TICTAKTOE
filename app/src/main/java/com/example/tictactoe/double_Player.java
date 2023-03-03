@@ -8,13 +8,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class double_Player extends AppCompatActivity {
     String Player_Name_1,Player_Name_2;
     TextView txt_player1,txt_player2,txt_Score_1,txt_Score_2;
     ImageView img_0,img_1,img_2,img_3,img_4,img_5,img_6,img_7,img_8;
-    int turn =1;
-    int[] status = {0,0,0,0,0,0,0,0,0};
+    int turn =PLAYER_1;
+    int winner;
+    int[] status = {NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL};
+    int[][] winner_Position={{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
+    final static int NULL=0;
+    final static int PLAYER_1=1;
+    final static int PLAYER_2=2;
+    final static int  NO_WINNER=3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,16 +55,26 @@ public class double_Player extends AppCompatActivity {
     }
     public void imagesClick(View view){
         int tag = Integer.parseInt((String)view.getTag());
-        if(status[tag] != 0)return;
+        if(status[tag] != NULL)return;
         ImageView imagesView =(ImageView) view;
-        if(turn == 1) {
+        if(turn == PLAYER_1) {
             imagesView.setImageResource(R.drawable.multiply);
-            turn=2;
-            status[tag]=1;
+            turn=PLAYER_2;
+            status[tag]=PLAYER_1;
         }else {
             imagesView.setImageResource(R.drawable.circle);
-            turn=1;
-            status[tag]=2;
+            turn=PLAYER_1;
+            status[tag]=PLAYER_2;
         }
+        winner = checkWinner();
+        Toast.makeText(this, winner+"", Toast.LENGTH_SHORT).show();
+        }
+        private int checkWinner(){
+            for(int [] win_pos:winner_Position){
+                if (status[win_pos[0]] == status[win_pos[1]] && status[win_pos[1]] == status[win_pos[2]] && status[win_pos[0]] != NULL){
+                    return status[win_pos[0]];
+                }
+            }
+            return NO_WINNER;
         }
 }
