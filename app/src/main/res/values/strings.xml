@@ -19,4 +19,6 @@
     <string name="player_1">Player1</string>
     <string name="Player_2">Player2</string>
     <string name="start_the_game">ُStart The Game</string>
+    <string name="You_r_equal">You are equal</string>
+    <string name="rest_game">بازی مجدد</string>
 </resources>
