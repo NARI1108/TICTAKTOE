@@ -15,6 +15,7 @@ import java.util.Arrays;
 
 
 public class double_Player extends AppCompatActivity {
+    int score_1=0,score_2=0;
     RelativeLayout result_layout;
     Button btn_play_again;
     String Player_Name_1,Player_Name_2;
@@ -100,10 +101,12 @@ public class double_Player extends AppCompatActivity {
              for(int i=0;i<imageViews_List.size();i++)imageViews_List.get(i).setEnabled(false);
              String res_str="";
              switch(winner){
-                 case 1:res_str=Player_Name_1+" won";break;
-                 case 2:res_str=Player_Name_2+" won";break;
+                 case 1:res_str=Player_Name_1+" won";score_1++;break;
+                 case 2:res_str=Player_Name_2+" won";score_2++;break;
                  case 3:res_str="You are equal";break;
              }
+             txt_Score_1.setText(String.valueOf(score_1));
+             txt_Score_2.setText(String.valueOf(score_2));
              txt_result.setText(res_str);
              result_layout.setVisibility(View.VISIBLE);
          }
