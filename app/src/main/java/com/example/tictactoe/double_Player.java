@@ -9,10 +9,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
 public class double_Player extends AppCompatActivity {
+    int score_1=0,score_2=0;
     RelativeLayout result_layout;
     Button btn_play_again;
     String Player_Name_1,Player_Name_2;
@@ -23,6 +26,7 @@ public class double_Player extends AppCompatActivity {
     Boolean game_over=false;
     int[] status = {NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL};
     int[][] winner_Position={{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
+    ArrayList<ImageView> imageViews_List =new ArrayList<>();
     final static int NULL=0;
     final static int PLAYER_1=1;
     final static int PLAYER_2=2;
@@ -39,6 +43,9 @@ public class double_Player extends AppCompatActivity {
         img_3=findViewById(R.id.img_3);  img_4=findViewById(R.id.img_4);  img_5=findViewById(R.id.img_5);
         img_6=findViewById(R.id.img_6);  img_7=findViewById(R.id.img_7);  img_8=findViewById(R.id.img_8);
         txt_result = findViewById(R.id.txt_result);
+        imageViews_List.add(img_0); imageViews_List.add(img_1); imageViews_List.add(img_2);
+        imageViews_List.add(img_3); imageViews_List.add(img_4); imageViews_List.add(img_5);
+        imageViews_List.add(img_6); imageViews_List.add(img_7); imageViews_List.add(img_8);
       playerNameDialog();
     }
     private void playerNameDialog(){
@@ -91,12 +98,15 @@ public class double_Player extends AppCompatActivity {
                 winner = checkWinner();
          if(winner != NO_WINNER || isFullCells()){
              game_over=true;
+             for(int i=0;i<imageViews_List.size();i++)imageViews_List.get(i).setEnabled(false);
              String res_str="";
              switch(winner){
-                 case 1:res_str=Player_Name_1+" won";break;
-                 case 2:res_str=Player_Name_2+" won";break;
+                 case 1:res_str=Player_Name_1+" won";score_1++;break;
+                 case 2:res_str=Player_Name_2+" won";score_2++;break;
                  case 3:res_str="You are equal";break;
              }
+             txt_Score_1.setText(String.valueOf(score_1));
+             txt_Score_2.setText(String.valueOf(score_2));
              txt_result.setText(res_str);
              result_layout.setVisibility(View.VISIBLE);
          }
@@ -113,15 +123,9 @@ public class double_Player extends AppCompatActivity {
             game_over=false;
             winner=-1;
           Arrays.fill(status,NULL);
-          img_0.setImageResource(0);
-          img_1.setImageResource(0);
-          img_2.setImageResource(0);
-          img_3.setImageResource(0);
-          img_4.setImageResource(0);
-          img_5.setImageResource(0);
-          img_6.setImageResource(0);
-          img_7.setImageResource(0);
-          img_8.setImageResource(0);
+          for(int i=0;i<imageViews_List.size();i++)
+          { imageViews_List.get(i).setImageResource(0);
+            imageViews_List.get(i).setEnabled(true);}
           result_layout.setVisibility(View.GONE);
         }
 
