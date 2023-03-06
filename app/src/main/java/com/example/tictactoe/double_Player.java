@@ -23,6 +23,7 @@ public class double_Player extends AppCompatActivity {
     ImageView img_0,img_1,img_2,img_3,img_4,img_5,img_6,img_7,img_8;
     int turn =PLAYER_1;
     int winner=-1;
+    int [] final_win_pos;
     Boolean game_over=false;
     int[] status = {NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL};
     int[][] winner_Position={{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
@@ -89,6 +90,7 @@ public class double_Player extends AppCompatActivity {
         private int checkWinner(){
             for(int [] win_pos:winner_Position){
                 if (status[win_pos[0]] == status[win_pos[1]] && status[win_pos[1]] == status[win_pos[2]] && status[win_pos[0]] != NULL){
+                    final_win_pos = win_pos;
                     return status[win_pos[0]];
                 }
             }
@@ -109,6 +111,7 @@ public class double_Player extends AppCompatActivity {
              txt_Score_2.setText(String.valueOf(score_2));
              txt_result.setText(res_str);
              result_layout.setVisibility(View.VISIBLE);
+             setColorCells();
          }
         }
 
@@ -128,5 +131,22 @@ public class double_Player extends AppCompatActivity {
             imageViews_List.get(i).setEnabled(true);}
           result_layout.setVisibility(View.GONE);
         }
-
+        private void setColorCells(){
+        for(int i=0;i<imageViews_List.size();i++){
+            if(status[i] == 1){
+                imageViews_List.get(i).setImageResource(R.drawable.multiply_grey);
+            }else if (status[i] == 2){
+                imageViews_List.get(i).setImageResource(R.drawable.circle_grey);
+            }
+            if(winner == PLAYER_1){
+                imageViews_List.get(final_win_pos[0]).setImageResource(R.drawable.multiply);
+                imageViews_List.get(final_win_pos[1]).setImageResource(R.drawable.multiply);
+                imageViews_List.get(final_win_pos[2]).setImageResource(R.drawable.multiply);
+            }else if(winner == PLAYER_2){
+                imageViews_List.get(final_win_pos[0]).setImageResource(R.drawable.circle);
+                imageViews_List.get(final_win_pos[1]).setImageResource(R.drawable.circle);
+                imageViews_List.get(final_win_pos[2]).setImageResource(R.drawable.circle);
+            }
+        }
+        }
 }
