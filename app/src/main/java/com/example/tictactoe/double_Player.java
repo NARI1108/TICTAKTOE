@@ -28,7 +28,7 @@ public class double_Player extends AppCompatActivity {
     int[] status = {NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL};
     int[][] winner_Position={{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
     ArrayList<ImageView> imageViews_List =new ArrayList<>();
-    MediaPlayer click_snd;
+    MediaPlayer click_snd,win_snd;
     final static int NULL=0;
     final static int PLAYER_1=1;
     final static int PLAYER_2=2;
@@ -115,18 +115,21 @@ public class double_Player extends AppCompatActivity {
              result_layout.setVisibility(View.VISIBLE);
              setColorCells();
              click_snd.start();
+             win_snd.start();
          }
     }
 
     @Override
-    protected void onResume() {
+    protected void onResume(){
         if(click_snd == null)click_snd = MediaPlayer.create(this,R.raw.click);
+        if(win_snd   == null)win_snd   = MediaPlayer.create(this,R.raw.win_sound);
         super.onResume();
     }
 
     @Override
-    protected void onPause() {
+    protected void onPause(){
         if(click_snd != null)click_snd.release();
+        if(win_snd   != null)win_snd.release();
         super.onPause();
     }
     private boolean isFullCells(){
