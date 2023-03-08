@@ -21,4 +21,7 @@
     <string name="start_the_game">ُStart The Game</string>
     <string name="You_r_equal">You are equal</string>
     <string name="rest_game">بازی مجدد</string>
+    <string name="select_the_level_game">Select The level game</string>
+    <string name="esay">Esay</string>
+    <string name="hard">Hard</string>
 </resources>
