@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public void  btn_Click(View view){
         int id =view.getId();
         switch(id){
-            case R.id.btn_Single_Player:startActivity(new Intent(MainActivity.this,single_Player.class));
+            case R.id.btn_Single_Player:levelDialog();
             break;
             case R.id.btn_Double_Player:startActivity(new Intent(MainActivity.this,double_Player.class));
             break;
@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         btn_Start_Again.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(rdo_easy.isChecked()){startActivity(new Intent(MainActivity.this,easySinglelayer.class));}
+                 else if(rdo_hard.isChecked()){startActivity(new Intent(MainActivity.this,hardSinglePlayer.class));}
                 levelNamesDialog.dismiss();
             }
         });
