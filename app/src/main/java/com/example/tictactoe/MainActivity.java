@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btn_Start_Again.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(rdo_easy.isChecked()){startActivity(new Intent(MainActivity.this,easySinglelayer.class));}
+                if(rdo_easy.isChecked()){startActivity(new Intent(MainActivity.this,easySinglePlayer.class));}
                  else if(rdo_hard.isChecked()){startActivity(new Intent(MainActivity.this,hardSinglePlayer.class));}
                 levelNamesDialog.dismiss();
             }
