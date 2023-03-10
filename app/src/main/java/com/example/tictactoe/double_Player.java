@@ -2,7 +2,6 @@ package com.example.tictactoe;
 
 import android.app.Dialog;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-public class double_Player extends AppCompatActivity {
+public class double_Player extends baseActivity {
     int score_1=0,score_2=0;
     RelativeLayout result_layout;
     Button btn_play_again;

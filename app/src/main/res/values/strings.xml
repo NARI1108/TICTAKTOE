@@ -24,4 +24,7 @@
     <string name="select_the_level_game">Select The level game</string>
     <string name="esay">Esay</string>
     <string name="hard">Hard</string>
+    <string name="You">You</string>
+    <string name="Robot">Robot</string>
+    <string name="Your_Name">Your Name</string>
 </resources>

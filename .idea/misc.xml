@@ -8,6 +8,7 @@
         <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/drawable/style1.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/drawable/style2.xml" value="0.1" />
+        <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/layout/activity_base.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/layout/activity_contact_us.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/layout/activity_double_player.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/layout/activity_easy_singlelayer.xml" value="0.13333333333333333" />
@@ -17,7 +18,7 @@
         <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/layout/activity_main2.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/layout/activity_splash_screen.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/layout/leve_names_dialog.xml" value="0.13333333333333333" />
-        <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/layout/player_names_dialog.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/user/Desktop/TICTACTOE/app/src/main/res/layout/player_names_dialog.xml" value="0.1" />
       </map>
     </option>
   </component>
